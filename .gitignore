@@ -1,0 +1,22 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/*
+!.vscode/mcp.json
+.idea/
+
+# Env / secrets — never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs / scratch
+*.log
+.direnv/
+
+# If servers are ever vendored as submodule checkouts locally
+# (this repo aggregates by link/submodule reference, not by vendoring source)
