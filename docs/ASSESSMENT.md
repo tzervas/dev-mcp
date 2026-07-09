@@ -38,3 +38,7 @@ Index + onboarding for:
 Useful discovery; must track reality of leaf repos’ `docs/ASSESSMENT.md` + `docs/ROADMAP.md`.
 
 See [ROADMAP.md](ROADMAP.md).
+
+## Tero index
+
+Layer-1 citation index: [docs/tero-index/](tero-index/) (`index.json`, `INDEX.md`, `MANIFEST.toml`).
