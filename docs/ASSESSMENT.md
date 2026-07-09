@@ -42,3 +42,15 @@ See [ROADMAP.md](ROADMAP.md).
 ## Tero index
 
 Layer-1 citation index: [docs/tero-index/](tero-index/) (`index.json`, `INDEX.md`, `MANIFEST.toml`).
+
+## W2 Rollout Update (chore/w2-rollout-docs-wiring, 2026-07-09)
+
+W2 usage + cabal facade example + cross-repo (cabal+memory) notes appended to servers/*.md (esp. memory-gate-rs.md, context-mcp.md) + README + this + ROADMAP. 
+
+- Documents W2 (StructuredResponse/CommonMemoryAdapter + AgentDomain mirrors) per plan.md w2 section.
+- Cabal current impl referenced (schemas/agent: facade.query(AgentDomain.TERO) -> StructuredResponse always).
+- Memory M1 domains mirror in memory-gate-rs/src/types.rs .
+- Context session noted as W2 consumer.
+- Tero cites: plan.md:44, wsfull-wave-2026-07-09-compact.md:30 (W2 schemas/facade start), dev-docs/schemas/.
+
+All append-only; hygiene, update-tero, branch chore/w2-rollout-docs-wiring. Land/propagate to dev/main. Verify tero hits post.

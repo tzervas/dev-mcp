@@ -179,7 +179,7 @@
       "kind": "section",
       "title": "Why links, not submodules",
       "file": "README.md",
-      "line": 23,
+      "line": 24,
       "tag": "Empirical/Declared",
       "summary": "Each server above is linked, not vendored as a git submodule. The family spans independent"
     },
@@ -189,7 +189,7 @@
       "kind": "section",
       "title": "What this repo is for",
       "file": "README.md",
-      "line": 31,
+      "line": 32,
       "tag": "Empirical/Declared",
       "summary": "- Discovery — one place to see every MCP server in the family, its purpose, and its status."
     },
@@ -199,7 +199,7 @@
       "kind": "section",
       "title": "What this repo is *not* for",
       "file": "README.md",
-      "line": 39,
+      "line": 40,
       "tag": "Empirical/Declared",
       "summary": "- Server implementation code (that lives in each server's own repo)."
     },
@@ -209,7 +209,7 @@
       "kind": "section",
       "title": "Contributing",
       "file": "README.md",
-      "line": 44,
+      "line": 45,
       "tag": "Empirical/Declared",
       "summary": "See [CONTRIBUTING.md](CONTRIBUTING.md)."
     },
@@ -219,7 +219,7 @@
       "kind": "section",
       "title": "License",
       "file": "README.md",
-      "line": 48,
+      "line": 49,
       "tag": "Empirical/Declared",
       "summary": "MIT — see [LICENSE](LICENSE). Matches the licensing of the sibling server repos."
     },
@@ -229,9 +229,19 @@
       "kind": "section",
       "title": "Status & roadmap",
       "file": "README.md",
-      "line": 52,
+      "line": 53,
       "tag": "Empirical/Declared",
       "summary": "- [Assessment & gaps](docs/ASSESSMENT.md)"
+    },
+    {
+      "anchor": "readme--w2-rollout-structuredresponse-commonmemoryadapter-agentdomain-mirrors",
+      "family": "doc",
+      "kind": "section",
+      "title": "W2 Rollout (StructuredResponse/CommonMemoryAdapter + AgentDomain mirrors)",
+      "file": "README.md",
+      "line": 58,
+      "tag": "Empirical/Declared",
+      "summary": "Append for chore/w2-rollout-docs-wiring: W2 usage notes added to servers/.md (memory-gate-rs.md with cabal facade ex + cross-repo cabal+memory; context-mcp.md…"
     },
     {
       "anchor": "assessment",
@@ -281,6 +291,16 @@
       "line": 42,
       "tag": "Empirical/Declared",
       "summary": "Layer-1 citation index: [docs/tero-index/](tero-index/) (index.json, INDEX.md, MANIFEST.toml)."
+    },
+    {
+      "anchor": "assessment--w2-rollout-update-chore-w2-rollout-docs-wiring-2026-07-09",
+      "family": "doc",
+      "kind": "section",
+      "title": "W2 Rollout Update (chore/w2-rollout-docs-wiring, 2026-07-09)",
+      "file": "docs/ASSESSMENT.md",
+      "line": 46,
+      "tag": "Empirical/Declared",
+      "summary": "W2 usage + cabal facade example + cross-repo (cabal+memory) notes appended to servers/.md (esp. memory-gate-rs.md, context-mcp.md) + README + this + ROADMAP."
     },
     {
       "anchor": "localchecks",
@@ -431,6 +451,16 @@
       "summary": "$GITPARENT/"
     },
     {
+      "anchor": "roadmap--w2-rollout-docs-wiring-chore-w2-rollout-docs-wiring",
+      "family": "doc",
+      "kind": "section",
+      "title": "W2 Rollout Docs Wiring (chore/w2-rollout-docs-wiring)",
+      "file": "docs/ROADMAP.md",
+      "line": 87,
+      "tag": "Empirical/Declared",
+      "summary": "- Appended W2 usage notes (cabal facade ex, cross-repo cabal+memory) to servers/.md , README, ASSESSMENT, this ROADMAP."
+    },
+    {
       "anchor": "readme-2",
       "family": "doc",
       "kind": "other",
@@ -486,7 +516,7 @@
       "kind": "section",
       "title": "Submodules vs. links",
       "file": "servers/README.md",
-      "line": 14,
+      "line": 15,
       "tag": "Empirical/Declared",
       "summary": "This directory links to each server's repo rather than checking it out as a git submodule. That"
     },
@@ -539,6 +569,16 @@
       "line": 25,
       "tag": "Empirical/Declared",
       "summary": "{"
+    },
+    {
+      "anchor": "agent-mcp--w2-usage-notes",
+      "family": "doc",
+      "kind": "section",
+      "title": "W2 Usage Notes",
+      "file": "servers/agent-mcp.md",
+      "line": 42,
+      "tag": "Empirical/Declared",
+      "summary": "Agent orchestration (future) will consume W2 StructuredResponse + CommonMemoryAdapter for domain-scoped orch hints (orchestration field) + cited memory from ca…"
     },
     {
       "anchor": "context-mcp",
@@ -601,6 +641,136 @@
       "summary": "{"
     },
     {
+      "anchor": "context-mcp--w2-usage-session-as-w2-consumer",
+      "family": "doc",
+      "kind": "section",
+      "title": "W2 Usage (session as W2 consumer)",
+      "file": "servers/context-mcp.md",
+      "line": 46,
+      "tag": "Empirical/Declared",
+      "summary": "Context-mcp acts as W2 consumer for session memory in the CommonMemory facade rollout. Integrates with StructuredResponse via tero + memory-gate domains (see p…"
+    },
+    {
+      "anchor": "memory-gate-rs",
+      "family": "doc",
+      "kind": "section",
+      "title": "memory-gate-rs",
+      "file": "servers/memory-gate-rs.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "summary": "Dynamic memory learning layer."
+    },
+    {
+      "anchor": "memory-gate-rs--m1-domains-facade",
+      "family": "doc",
+      "kind": "section",
+      "title": "M1 domains/facade",
+      "file": "servers/memory-gate-rs.md",
+      "line": 7,
+      "tag": "Empirical/Declared",
+      "summary": "Extended AgentDomain (Workspace, Tero, Context, MemoryGate, LangRust, LangPython + legacy) with prefix-aware FromStr (\"layer:tero\", \"lang:rust\", \"repo:xxx\"). T…"
+    },
+    {
+      "anchor": "memory-gate-rs--w2-mirror-to-cabal-tero",
+      "family": "doc",
+      "kind": "section",
+      "title": "W2 mirror to cabal, tero",
+      "file": "servers/memory-gate-rs.md",
+      "line": 11,
+      "tag": "Empirical/Declared",
+      "summary": "Py mirror: CommonMemoryAdapter + AgentDomain in cabal-devmelopner/core/schemas.py (W2). Domain as scoping key for shared StructuredResponse + citations across…"
+    },
+    {
+      "anchor": "memory-gate-rs--status",
+      "family": "doc",
+      "kind": "section",
+      "title": "Status",
+      "file": "servers/memory-gate-rs.md",
+      "line": 15,
+      "tag": "Empirical/Declared",
+      "summary": "M1 complete (feature/mint-m1-domain-facade, PR #26; merged dev→main 2026-07-09). v1.0.0 published on crates.io. Active development (M2+ pending per roadmap). A…"
+    },
+    {
+      "anchor": "memory-gate-rs--repo",
+      "family": "doc",
+      "kind": "section",
+      "title": "Repo",
+      "file": "servers/memory-gate-rs.md",
+      "line": 19,
+      "tag": "Empirical/Declared",
+      "summary": "<https://github.com/tzervas/memory-gate-rs>"
+    },
+    {
+      "anchor": "memory-gate-rs--install",
+      "family": "doc",
+      "kind": "section",
+      "title": "Install",
+      "file": "servers/memory-gate-rs.md",
+      "line": 23,
+      "tag": "Empirical/Declared",
+      "summary": "cargo install memory-gate-rs"
+    },
+    {
+      "anchor": "memory-gate-rs--or-as-library-common",
+      "family": "doc",
+      "kind": "other",
+      "title": "or (as library, common):",
+      "file": "servers/memory-gate-rs.md",
+      "line": 27,
+      "tag": "Empirical/Declared",
+      "summary": "git clone https://github.com/tzervas/memory-gate-rs"
+    },
+    {
+      "anchor": "memory-gate-rs--dependencies",
+      "family": "doc",
+      "kind": "other",
+      "title": "[dependencies]",
+      "file": "servers/memory-gate-rs.md",
+      "line": 28,
+      "tag": "Empirical/Declared",
+      "summary": "git clone https://github.com/tzervas/memory-gate-rs"
+    },
+    {
+      "anchor": "memory-gate-rs--memory-gate-rs-1.0",
+      "family": "doc",
+      "kind": "other",
+      "title": "memory-gate-rs = \"1.0\"",
+      "file": "servers/memory-gate-rs.md",
+      "line": 29,
+      "tag": "Empirical/Declared",
+      "summary": "git clone https://github.com/tzervas/memory-gate-rs"
+    },
+    {
+      "anchor": "memory-gate-rs--or-build-from-source",
+      "family": "doc",
+      "kind": "other",
+      "title": "or build from source",
+      "file": "servers/memory-gate-rs.md",
+      "line": 31,
+      "tag": "Empirical/Declared",
+      "summary": "git clone https://github.com/tzervas/memory-gate-rs"
+    },
+    {
+      "anchor": "memory-gate-rs--register-in-.mcp.json",
+      "family": "doc",
+      "kind": "section",
+      "title": "Register in `.mcp.json`",
+      "file": "servers/memory-gate-rs.md",
+      "line": 39,
+      "tag": "Empirical/Declared",
+      "summary": "Core library (no standalone MCP binary today). Family servers surface memory via tero-mcp (cited L1), context-mcp (session), and integrations (cabal W2 facade…"
+    },
+    {
+      "anchor": "memory-gate-rs--w2-rollout-usage-notes-chore-w2-rollout-docs-wiring",
+      "family": "doc",
+      "kind": "section",
+      "title": "W2 Rollout Usage Notes (chore/w2-rollout-docs-wiring)",
+      "file": "servers/memory-gate-rs.md",
+      "line": 43,
+      "tag": "Empirical/Declared",
+      "summary": "W2 advances StructuredResponse + CommonMemoryAdapter + AgentDomain mirrors across repos (per plan.md §2 w2-rollout)."
+    },
+    {
       "anchor": "security-mcp",
       "family": "doc",
       "kind": "section",
@@ -659,6 +829,16 @@
       "line": 28,
       "tag": "Empirical/Declared",
       "summary": "{"
+    },
+    {
+      "anchor": "security-mcp--w2-cross-notes",
+      "family": "doc",
+      "kind": "section",
+      "title": "W2 Cross Notes",
+      "file": "servers/security-mcp.md",
+      "line": 41,
+      "tag": "Empirical/Declared",
+      "summary": "Security screening integrates in W2 orch paths (cabal facade + StructuredResponse before/after agent calls). See dev-mcp cross-repo (cabal + memory), plan.md:4…"
     },
     {
       "anchor": "tero-mcp",
@@ -729,6 +909,16 @@
       "line": 28,
       "tag": "Empirical/Declared",
       "summary": "{"
+    },
+    {
+      "anchor": "tero-mcp--w2-usage-notes-cites-facade",
+      "family": "doc",
+      "kind": "section",
+      "title": "W2 Usage Notes (cites + facade)",
+      "file": "servers/tero-mcp.md",
+      "line": 43,
+      "tag": "Empirical/Declared",
+      "summary": "Tero-mcp serves L1 for W2: provides cited results consumed into StructuredResponse.citations via CommonMemoryAdapter (cabal + mirrors). Domain scoping (AgentDo…"
     }
   ],
   "flagged": []

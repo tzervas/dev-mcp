@@ -83,4 +83,14 @@ $GIT_PARENT/
   search-box/
   cabal-devmelopner/   # consumer
   mycelium/            # default tero index
+
+## W2 Rollout Docs Wiring (chore/w2-rollout-docs-wiring)
+
+- Appended W2 usage notes (cabal facade ex, cross-repo cabal+memory) to servers/*.md , README, ASSESSMENT, this ROADMAP.
+- Context: session as W2 consumer (domain CONTEXT in CommonMemory facade).
+- Memory-gate: facade evolution refs.
+- Cites (to plan/wsfull): plan.md §2 w2-rollout (W2 StructuredResponse/CommonMemoryAdapter + AgentDomain M1 mirrors), wsfull-wave-2026-07-09-compact.md (W2 Common Memory + schemas), dev-docs/schemas/W2-STRUCTURED-SCHEMAS.md .
+- Follow-on: tero update per leaf; hygiene; land --no-ff to dev then main; propagate; verify tero "W2|facade|Structured|CommonMemory".
+
+See plan.md:44, dev-docs/waves/wsfull-*.md .
 ```

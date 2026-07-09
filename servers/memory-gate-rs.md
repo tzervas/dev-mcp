@@ -39,3 +39,21 @@ See the repo's own `README.md` (M1 section), `AGENTS.md`, `CHANGELOG.md`, and `d
 ## Register in `.mcp.json`
 
 Core library (no standalone MCP binary today). Family servers surface memory via tero-mcp (cited L1), context-mcp (session), and integrations (cabal W2 facade + agent-mcp). Use via dependency + facade in Rust/Python agents. See memory-gate-rs examples and cabal-devmelopner for wiring.
+
+## W2 Rollout Usage Notes (chore/w2-rollout-docs-wiring)
+
+W2 advances StructuredResponse + CommonMemoryAdapter + AgentDomain mirrors across repos (per plan.md §2 w2-rollout). 
+
+- Cabal facade example (current impl from cabal-devmelopner/src/cabal_devmelopner/core/schemas.py + agent.py):
+  ```python
+  from cabal_devmelopner.core.schemas import AgentDomain, CommonMemoryAdapter, StructuredResponse
+  facade = CommonMemoryAdapter(tero_client)
+  resp: StructuredResponse = facade.query(AgentDomain.TERO, "query for orch", {"limit": 5})
+  # always Structured (kind=answer|refusal); .citations, .orchestration, extended["domain"]
+  if resp.is_refusal(): ...  # C0 emit to EventBus
+  ```
+- Cross-repo (cabal + memory): memory-gate-rs provides Rust AgentDomain M1 (types.rs:167+) with FromStr prefixes ("layer:tero", "lang:rust"). Cabal Py mirrors + uses for domain-scoped tero queries. Context-mcp as session consumer for W2. See dev-docs/schemas/W2-STRUCTURED-SCHEMAS.md, common_memory_facade*.example, wsfull-wave-2026-07-09-compact.md:30.
+- Usage: domain-scoped via facade.query -> tero L1 cited -> StructuredResponse for orch hints. Evolve thin facade in memory-gate.
+- Tero cites: plan.md:44 (W2 / Common Memory Facade Rollout), wsfull-wave-2026-07-09-compact.md §W2, dev-docs/schemas/W2-STRUCTURED-SCHEMAS.md.
+
+See also: memory-gate-rs AGENTS/ROADMAP (facade evolution), cabal AGENTS (post-PR#12), context-mcp as W2 session consumer.
