@@ -48,3 +48,8 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 ## License
 
 MIT — see [`LICENSE`](LICENSE). Matches the licensing of the sibling server repos.
+
+## Status & roadmap
+
+- [Assessment & gaps](docs/ASSESSMENT.md)
+- [Product roadmap & API plans](docs/ROADMAP.md)

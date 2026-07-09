@@ -1,0 +1,625 @@
+{
+  "generated": "Empirical/Declared — lite heading/line heuristic over markdown in dev-mcp via tero-mcp/scripts/generate_lite_index.py; source files are ground truth. Generated 2026-07-09.",
+  "item_tag": "Empirical/Declared",
+  "siblings": [],
+  "items": [
+    {
+      "anchor": "agents",
+      "family": "doc",
+      "kind": "section",
+      "title": "AGENTS.md — standing up the MCP family locally",
+      "file": "AGENTS.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "summary": "This is the umbrella bring-up guide: how an agent (or a human) clones, builds, and registers the"
+    },
+    {
+      "anchor": "agents--1.-prerequisites",
+      "family": "doc",
+      "kind": "section",
+      "title": "1. Prerequisites",
+      "file": "AGENTS.md",
+      "line": 7,
+      "tag": "Empirical/Declared",
+      "summary": "- git"
+    },
+    {
+      "anchor": "agents--2.-clone-each-server",
+      "family": "doc",
+      "kind": "section",
+      "title": "2. Clone each server",
+      "file": "AGENTS.md",
+      "line": 15,
+      "tag": "Empirical/Declared",
+      "summary": "Pick a working directory (e.g. ~/dev/mcp/) and clone the servers you need. Not every server is"
+    },
+    {
+      "anchor": "agents--tero-mcp-not-yet-published-clone-once-it-exists-see-servers-tero-mcp.md",
+      "family": "doc",
+      "kind": "other",
+      "title": "tero-mcp: not yet published — clone once it exists (see servers/tero-mcp.md)",
+      "file": "AGENTS.md",
+      "line": 27,
+      "tag": "Empirical/Declared",
+      "summary": "All current family members are Rust crates; build each with cargo:"
+    },
+    {
+      "anchor": "agents--3.-build-each-server",
+      "family": "doc",
+      "kind": "section",
+      "title": "3. Build each server",
+      "file": "AGENTS.md",
+      "line": 30,
+      "tag": "Empirical/Declared",
+      "summary": "All current family members are Rust crates; build each with cargo:"
+    },
+    {
+      "anchor": "agents--4.-register-with-your-mcp-client",
+      "family": "doc",
+      "kind": "section",
+      "title": "4. Register with your MCP client",
+      "file": "AGENTS.md",
+      "line": 47,
+      "tag": "Empirical/Declared",
+      "summary": "Merge the snippets from [servers/.md](servers/) into your client's MCP config"
+    },
+    {
+      "anchor": "agents--5.-verify",
+      "family": "doc",
+      "kind": "section",
+      "title": "5. Verify",
+      "file": "AGENTS.md",
+      "line": 76,
+      "tag": "Empirical/Declared",
+      "summary": "Restart your MCP client and confirm each server shows as connected. Each server's own repo has"
+    },
+    {
+      "anchor": "agents--notes-for-agents-doing-this-work",
+      "family": "doc",
+      "kind": "section",
+      "title": "Notes for agents doing this work",
+      "file": "AGENTS.md",
+      "line": 82,
+      "tag": "Empirical/Declared",
+      "summary": "- This repo indexes the family; it doesn't vendor or rebuild their code. Don't copy server"
+    },
+    {
+      "anchor": "contributing",
+      "family": "doc",
+      "kind": "section",
+      "title": "Contributing to dev-mcp",
+      "file": "CONTRIBUTING.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "summary": "dev-mcp is a documentation-first umbrella/index repo for the tzervas MCP server family. There"
+    },
+    {
+      "anchor": "contributing--what-belongs-here",
+      "family": "doc",
+      "kind": "section",
+      "title": "What belongs here",
+      "file": "CONTRIBUTING.md",
+      "line": 7,
+      "tag": "Empirical/Declared",
+      "summary": "- Updates to the [server inventory](README.md#server-inventory) (new server, status change, repo"
+    },
+    {
+      "anchor": "contributing--what-does-not-belong-here",
+      "family": "doc",
+      "kind": "section",
+      "title": "What does *not* belong here",
+      "file": "CONTRIBUTING.md",
+      "line": 16,
+      "tag": "Empirical/Declared",
+      "summary": "- Server implementation code. If you want to change how a server behaves, open the PR in that"
+    },
+    {
+      "anchor": "contributing--adding-a-new-server-to-the-inventory",
+      "family": "doc",
+      "kind": "section",
+      "title": "Adding a new server to the inventory",
+      "file": "CONTRIBUTING.md",
+      "line": 22,
+      "tag": "Empirical/Declared",
+      "summary": "1. Add a row to the table in [README.md](README.md#server-inventory): name, one-line purpose,"
+    },
+    {
+      "anchor": "contributing--workflow",
+      "family": "doc",
+      "kind": "section",
+      "title": "Workflow",
+      "file": "CONTRIBUTING.md",
+      "line": 30,
+      "tag": "Empirical/Declared",
+      "summary": "- Branch from main, open a PR — no direct pushes to main."
+    },
+    {
+      "anchor": "contributing--reporting-issues",
+      "family": "doc",
+      "kind": "section",
+      "title": "Reporting issues",
+      "file": "CONTRIBUTING.md",
+      "line": 37,
+      "tag": "Empirical/Declared",
+      "summary": "Issues about a specific server's behavior belong in that server's own repo. Issues about the"
+    },
+    {
+      "anchor": "contributing--license",
+      "family": "doc",
+      "kind": "section",
+      "title": "License",
+      "file": "CONTRIBUTING.md",
+      "line": 42,
+      "tag": "Empirical/Declared",
+      "summary": "By contributing, you agree your contributions are licensed under this repo's [MIT license](LICENSE)."
+    },
+    {
+      "anchor": "readme",
+      "family": "doc",
+      "kind": "other",
+      "title": "dev-mcp",
+      "file": "README.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "summary": "The umbrella index for the tzervas MCP (Model Context Protocol) server family."
+    },
+    {
+      "anchor": "readme--server-inventory",
+      "family": "doc",
+      "kind": "section",
+      "title": "Server inventory",
+      "file": "README.md",
+      "line": 11,
+      "tag": "Empirical/Declared",
+      "summary": "Per-server details (purpose, install, .mcp.json registration snippet) live under"
+    },
+    {
+      "anchor": "readme--why-links-not-submodules",
+      "family": "doc",
+      "kind": "section",
+      "title": "Why links, not submodules",
+      "file": "README.md",
+      "line": 23,
+      "tag": "Empirical/Declared",
+      "summary": "Each server above is linked, not vendored as a git submodule. The family spans independent"
+    },
+    {
+      "anchor": "readme--what-this-repo-is-for",
+      "family": "doc",
+      "kind": "section",
+      "title": "What this repo is for",
+      "file": "README.md",
+      "line": 31,
+      "tag": "Empirical/Declared",
+      "summary": "- Discovery — one place to see every MCP server in the family, its purpose, and its status."
+    },
+    {
+      "anchor": "readme--what-this-repo-is-not-for",
+      "family": "doc",
+      "kind": "section",
+      "title": "What this repo is *not* for",
+      "file": "README.md",
+      "line": 39,
+      "tag": "Empirical/Declared",
+      "summary": "- Server implementation code (that lives in each server's own repo)."
+    },
+    {
+      "anchor": "readme--contributing",
+      "family": "doc",
+      "kind": "section",
+      "title": "Contributing",
+      "file": "README.md",
+      "line": 44,
+      "tag": "Empirical/Declared",
+      "summary": "See [CONTRIBUTING.md](CONTRIBUTING.md)."
+    },
+    {
+      "anchor": "readme--license",
+      "family": "doc",
+      "kind": "section",
+      "title": "License",
+      "file": "README.md",
+      "line": 48,
+      "tag": "Empirical/Declared",
+      "summary": "MIT — see [LICENSE](LICENSE). Matches the licensing of the sibling server repos."
+    },
+    {
+      "anchor": "readme--status-roadmap",
+      "family": "doc",
+      "kind": "section",
+      "title": "Status & roadmap",
+      "file": "README.md",
+      "line": 52,
+      "tag": "Empirical/Declared",
+      "summary": "- [Assessment & gaps](docs/ASSESSMENT.md)"
+    },
+    {
+      "anchor": "assessment",
+      "family": "doc",
+      "kind": "note",
+      "title": "dev-mcp — Assessment & Gap Analysis",
+      "file": "docs/ASSESSMENT.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "summary": "Date: 2026-07-08"
+    },
+    {
+      "anchor": "assessment--1.-what-it-is",
+      "family": "doc",
+      "kind": "section",
+      "title": "1. What it is",
+      "file": "docs/ASSESSMENT.md",
+      "line": 9,
+      "tag": "Empirical/Declared",
+      "summary": "Index + onboarding for:"
+    },
+    {
+      "anchor": "assessment--2.-gaps",
+      "family": "doc",
+      "kind": "section",
+      "title": "2. Gaps",
+      "file": "docs/ASSESSMENT.md",
+      "line": 24,
+      "tag": "Empirical/Declared"
+    },
+    {
+      "anchor": "assessment--3.-maturity-as-umbrella-3-5-after-refresh",
+      "family": "doc",
+      "kind": "section",
+      "title": "3. Maturity as umbrella: **3 / 5** after refresh",
+      "file": "docs/ASSESSMENT.md",
+      "line": 36,
+      "tag": "Empirical/Declared",
+      "summary": "Useful discovery; must track reality of leaf repos’ docs/ASSESSMENT.md + docs/ROADMAP.md."
+    },
+    {
+      "anchor": "roadmap",
+      "family": "doc",
+      "kind": "note",
+      "title": "dev-mcp — Product Roadmap",
+      "file": "docs/ROADMAP.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "status": "Living (2026-07-08)",
+      "summary": "Status: Living (2026-07-08)"
+    },
+    {
+      "anchor": "roadmap--waves",
+      "family": "doc",
+      "kind": "section",
+      "title": "Waves",
+      "file": "docs/ROADMAP.md",
+      "line": 10,
+      "tag": "Empirical/Declared"
+    },
+    {
+      "anchor": "roadmap--wave-a-truth-pass-now",
+      "family": "doc",
+      "kind": "section",
+      "title": "Wave A — Truth pass (now)",
+      "file": "docs/ROADMAP.md",
+      "line": 12,
+      "tag": "Empirical/Declared"
+    },
+    {
+      "anchor": "roadmap--wave-b-onboarding-ux",
+      "family": "doc",
+      "kind": "section",
+      "title": "Wave B — Onboarding UX",
+      "file": "docs/ROADMAP.md",
+      "line": 21,
+      "tag": "Empirical/Declared"
+    },
+    {
+      "anchor": "roadmap--wave-c-optional-automation",
+      "family": "doc",
+      "kind": "section",
+      "title": "Wave C — Optional automation",
+      "file": "docs/ROADMAP.md",
+      "line": 29,
+      "tag": "Empirical/Declared",
+      "summary": "dev-mcp exposes no runtime API."
+    },
+    {
+      "anchor": "roadmap--api-plan",
+      "family": "doc",
+      "kind": "section",
+      "title": "API plan",
+      "file": "docs/ROADMAP.md",
+      "line": 38,
+      "tag": "Empirical/Declared",
+      "summary": "dev-mcp exposes no runtime API."
+    },
+    {
+      "anchor": "roadmap--name",
+      "family": "doc",
+      "kind": "other",
+      "title": "<name>",
+      "file": "docs/ROADMAP.md",
+      "line": 52,
+      "tag": "Empirical/Declared",
+      "summary": "Status: ..."
+    },
+    {
+      "anchor": "roadmap--pr-plan",
+      "family": "doc",
+      "kind": "section",
+      "title": "PR plan",
+      "file": "docs/ROADMAP.md",
+      "line": 63,
+      "tag": "Empirical/Declared",
+      "summary": "1. Assessment + roadmap (this)"
+    },
+    {
+      "anchor": "roadmap--family-clone-layout-canonical",
+      "family": "doc",
+      "kind": "section",
+      "title": "Family clone layout (canonical)",
+      "file": "docs/ROADMAP.md",
+      "line": 72,
+      "tag": "Empirical/Declared",
+      "summary": "$GITPARENT/"
+    },
+    {
+      "anchor": "readme-2",
+      "family": "doc",
+      "kind": "other",
+      "title": "Servers index",
+      "file": "servers/README.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "summary": "One stub per server in the family — purpose, repo, install, and the .mcp.json snippet to"
+    },
+    {
+      "anchor": "readme--submodules-vs.-links",
+      "family": "doc",
+      "kind": "section",
+      "title": "Submodules vs. links",
+      "file": "servers/README.md",
+      "line": 14,
+      "tag": "Empirical/Declared",
+      "summary": "This directory links to each server's repo rather than checking it out as a git submodule. That"
+    },
+    {
+      "anchor": "agent-mcp",
+      "family": "doc",
+      "kind": "section",
+      "title": "agent-mcp",
+      "file": "servers/agent-mcp.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "summary": "Multi-LLM orchestration."
+    },
+    {
+      "anchor": "agent-mcp--status",
+      "family": "doc",
+      "kind": "section",
+      "title": "Status",
+      "file": "servers/agent-mcp.md",
+      "line": 9,
+      "tag": "Empirical/Declared",
+      "summary": "Active development."
+    },
+    {
+      "anchor": "agent-mcp--repo",
+      "family": "doc",
+      "kind": "section",
+      "title": "Repo",
+      "file": "servers/agent-mcp.md",
+      "line": 13,
+      "tag": "Empirical/Declared",
+      "summary": "<https://github.com/tzervas/agent-mcp>"
+    },
+    {
+      "anchor": "agent-mcp--install",
+      "family": "doc",
+      "kind": "section",
+      "title": "Install",
+      "file": "servers/agent-mcp.md",
+      "line": 17,
+      "tag": "Empirical/Declared",
+      "summary": "git clone https://github.com/tzervas/agent-mcp"
+    },
+    {
+      "anchor": "agent-mcp--register-in-.mcp.json",
+      "family": "doc",
+      "kind": "section",
+      "title": "Register in `.mcp.json`",
+      "file": "servers/agent-mcp.md",
+      "line": 25,
+      "tag": "Empirical/Declared",
+      "summary": "{"
+    },
+    {
+      "anchor": "context-mcp",
+      "family": "doc",
+      "kind": "section",
+      "title": "context-mcp",
+      "file": "servers/context-mcp.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "summary": "RAG context store."
+    },
+    {
+      "anchor": "context-mcp--status",
+      "family": "doc",
+      "kind": "section",
+      "title": "Status",
+      "file": "servers/context-mcp.md",
+      "line": 11,
+      "tag": "Empirical/Declared",
+      "summary": "Production-ready for context storage and lightweight RAG; APIs stable."
+    },
+    {
+      "anchor": "context-mcp--repo",
+      "family": "doc",
+      "kind": "section",
+      "title": "Repo",
+      "file": "servers/context-mcp.md",
+      "line": 15,
+      "tag": "Empirical/Declared",
+      "summary": "<https://github.com/tzervas/context-mcp>"
+    },
+    {
+      "anchor": "context-mcp--install",
+      "family": "doc",
+      "kind": "section",
+      "title": "Install",
+      "file": "servers/context-mcp.md",
+      "line": 19,
+      "tag": "Empirical/Declared",
+      "summary": "cargo install context-mcp"
+    },
+    {
+      "anchor": "context-mcp--or-build-from-source",
+      "family": "doc",
+      "kind": "other",
+      "title": "or build from source",
+      "file": "servers/context-mcp.md",
+      "line": 23,
+      "tag": "Empirical/Declared",
+      "summary": "git clone https://github.com/tzervas/context-mcp"
+    },
+    {
+      "anchor": "context-mcp--register-in-.mcp.json",
+      "family": "doc",
+      "kind": "section",
+      "title": "Register in `.mcp.json`",
+      "file": "servers/context-mcp.md",
+      "line": 31,
+      "tag": "Empirical/Declared",
+      "summary": "{"
+    },
+    {
+      "anchor": "security-mcp",
+      "family": "doc",
+      "kind": "section",
+      "title": "security-mcp",
+      "file": "servers/security-mcp.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "summary": "Content screening."
+    },
+    {
+      "anchor": "security-mcp--status",
+      "family": "doc",
+      "kind": "section",
+      "title": "Status",
+      "file": "servers/security-mcp.md",
+      "line": 10,
+      "tag": "Empirical/Declared",
+      "summary": "Alpha / active development — rules and thresholds will evolve."
+    },
+    {
+      "anchor": "security-mcp--repo",
+      "family": "doc",
+      "kind": "section",
+      "title": "Repo",
+      "file": "servers/security-mcp.md",
+      "line": 14,
+      "tag": "Empirical/Declared",
+      "summary": "<https://github.com/tzervas/security-mcp>"
+    },
+    {
+      "anchor": "security-mcp--install",
+      "family": "doc",
+      "kind": "section",
+      "title": "Install",
+      "file": "servers/security-mcp.md",
+      "line": 18,
+      "tag": "Empirical/Declared",
+      "summary": "cargo install security-mcp"
+    },
+    {
+      "anchor": "security-mcp--or-build-from-source",
+      "family": "doc",
+      "kind": "other",
+      "title": "or build from source",
+      "file": "servers/security-mcp.md",
+      "line": 22,
+      "tag": "Empirical/Declared",
+      "summary": "git clone https://github.com/tzervas/security-mcp"
+    },
+    {
+      "anchor": "security-mcp--register-in-.mcp.json",
+      "family": "doc",
+      "kind": "section",
+      "title": "Register in `.mcp.json`",
+      "file": "servers/security-mcp.md",
+      "line": 28,
+      "tag": "Empirical/Declared",
+      "summary": "{"
+    },
+    {
+      "anchor": "tero-mcp",
+      "family": "doc",
+      "kind": "section",
+      "title": "tero-mcp",
+      "file": "servers/tero-mcp.md",
+      "line": 1,
+      "tag": "Empirical/Declared",
+      "summary": "Transparent, cited-memory MCP server."
+    },
+    {
+      "anchor": "tero-mcp--status",
+      "family": "doc",
+      "kind": "section",
+      "title": "Status",
+      "file": "servers/tero-mcp.md",
+      "line": 9,
+      "tag": "Empirical/Declared",
+      "summary": "New. This is the newest member of the family — the repo (tzervas/tero-mcp) has not been"
+    },
+    {
+      "anchor": "tero-mcp--repo",
+      "family": "doc",
+      "kind": "section",
+      "title": "Repo",
+      "file": "servers/tero-mcp.md",
+      "line": 15,
+      "tag": "Empirical/Declared",
+      "summary": "<https://github.com/tzervas/tero-mcp> (not yet published)"
+    },
+    {
+      "anchor": "tero-mcp--install",
+      "family": "doc",
+      "kind": "section",
+      "title": "Install",
+      "file": "servers/tero-mcp.md",
+      "line": 19,
+      "tag": "Empirical/Declared",
+      "summary": "git clone https://github.com/tzervas/tero-mcp"
+    },
+    {
+      "anchor": "tero-mcp--once-published",
+      "family": "doc",
+      "kind": "other",
+      "title": "once published:",
+      "file": "servers/tero-mcp.md",
+      "line": 22,
+      "tag": "Empirical/Declared",
+      "summary": "git clone https://github.com/tzervas/tero-mcp"
+    },
+    {
+      "anchor": "tero-mcp--build-steps-tbd-update-once-the-repos-own-readme-specifies-its-toolchain",
+      "family": "doc",
+      "kind": "other",
+      "title": "build steps TBD — update once the repo's own README specifies its toolchain",
+      "file": "servers/tero-mcp.md",
+      "line": 25,
+      "tag": "Empirical/Declared",
+      "summary": "{"
+    },
+    {
+      "anchor": "tero-mcp--register-in-.mcp.json",
+      "family": "doc",
+      "kind": "section",
+      "title": "Register in `.mcp.json`",
+      "file": "servers/tero-mcp.md",
+      "line": 28,
+      "tag": "Empirical/Declared",
+      "summary": "{"
+    }
+  ],
+  "flagged": []
+}
