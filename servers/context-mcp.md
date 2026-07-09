@@ -42,3 +42,11 @@ See the repo's own `INSTALL.md` for VS Code configuration details.
 ```
 
 Or run it as an HTTP server: `context-mcp --host 127.0.0.1 --port 3000`.
+
+## W2 Usage (session as W2 consumer)
+
+Context-mcp acts as W2 consumer for session memory in the CommonMemory facade rollout. Integrates with StructuredResponse via tero + memory-gate domains (see plan.md w2-rollout). Session items can feed MemoryContext in cabal's facade (AgentDomain.CONTEXT). Future: real RAG under W2 contract (always cited Structured incl refusal).
+
+Cross-repo: cabal-devmelopner uses for session alongside memory-gate-rs (AgentDomain) and tero. See dev-docs/schemas/structured-response.schema.json + cabal schemas/agent.py run_structured (mem_contexts from facade), wsfull-wave-2026-07-09-compact.md.
+
+Tero cite: plan.md:44, wsfull-wave §W2 Common Memory.

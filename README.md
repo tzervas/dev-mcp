@@ -54,3 +54,13 @@ MIT — see [`LICENSE`](LICENSE). Matches the licensing of the sibling server re
 
 - [Assessment & gaps](docs/ASSESSMENT.md)
 - [Product roadmap & API plans](docs/ROADMAP.md)
+
+## W2 Rollout (StructuredResponse/CommonMemoryAdapter + AgentDomain mirrors)
+
+Append for chore/w2-rollout-docs-wiring: W2 usage notes added to servers/*.md (memory-gate-rs.md with cabal facade ex + cross-repo cabal+memory; context-mcp.md as session W2 consumer; agent/tero/security updated). 
+
+Cabal facade example (mirrors memory-gate M1): see servers/memory-gate-rs.md and cabal-devmelopner/core/schemas.py:CommonMemoryAdapter + AgentDomain (from_str prefixes). Integrates tero L1 -> StructuredResponse (citations, orchestration) for cross (cabal + memory-gate-rs + context-mcp).
+
+Refs (tero-cited): plan.md §2 (w2-rollout — in_progress), wsfull-wave-2026-07-09-compact.md §W2, dev-docs/schemas/W2-STRUCTURED-SCHEMAS.md + *.example.
+
+Hygiene + tero update + land --no-ff dev/main + propagate per task. All append-only.

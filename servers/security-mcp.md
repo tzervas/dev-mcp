@@ -37,6 +37,10 @@ cargo build --release
     }
   }
 }
+
+## W2 Cross Notes
+
+Security screening integrates in W2 orch paths (cabal facade + StructuredResponse before/after agent calls). See dev-mcp cross-repo (cabal + memory), plan.md:44 w2-rollout.
 ```
 
 The `--stdio` flag is required for MCP-client integration — without it the server defaults to HTTP

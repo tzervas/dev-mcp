@@ -39,3 +39,7 @@ cd tero-mcp
 ```
 
 Update this snippet once the real binary name / flags are published in the server's own README.
+
+## W2 Usage Notes (cites + facade)
+
+Tero-mcp serves L1 for W2: provides cited results consumed into StructuredResponse.citations via CommonMemoryAdapter (cabal + mirrors). Domain scoping (AgentDomain.TERO) in facade.query feeds tero text_search. See plan.md w2-rollout, dev-docs/schemas/ (examples for StructuredResponse), cabal schemas, memory-gate types.rs M1 domains, wsfull-wave-2026-07-09-compact.md. Cross-repo wiring: cabal facade + memory + context.
