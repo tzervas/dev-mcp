@@ -3,13 +3,13 @@
 > **Honesty:** Empirical/Declared — lite heading/line heuristic over markdown in dev-mcp via tero-mcp/scripts/generate_lite_index.py; source files are ground truth. Generated 2026-07-09.
 > Use this index to find where to Read, not as authoritative ground truth.
 
-- **Items:** 62
+- **Items:** 73
 - **Flagged:** 0
 - **item_tag:** `Empirical/Declared`
 - **Machine index:** [`index.json`](./index.json)
 - **Manifest:** [`MANIFEST.toml`](./MANIFEST.toml)
 
-## doc (62 entries)
+## doc (73 entries)
 
 | Anchor | Kind | Id | Title | File:Line | Status | Summary |
 |---|---|---|---|---|---|---|
@@ -40,6 +40,13 @@
 | `assessment--1.-what-it-is` | section | — | 1. What it is | `docs/ASSESSMENT.md:9` | — | Index + onboarding for: |
 | `assessment--2.-gaps` | section | — | 2. Gaps | `docs/ASSESSMENT.md:24` | — | — |
 | `assessment--3.-maturity-as-umbrella-3-5-after-refresh` | section | — | 3. Maturity as umbrella: **3 / 5** after refresh | `docs/ASSESSMENT.md:36` | — | Useful discovery; must track reality of leaf repos’ docs/ASSESSMENT.md + docs/ROADMAP.md. |
+| `assessment--tero-index` | section | — | Tero index | `docs/ASSESSMENT.md:42` | — | Layer-1 citation index: [docs/tero-index/](tero-index/) (index.json, INDEX.md, MANIFEST.toml). |
+| `localchecks` | section | — | Local checks (CI parity) | `docs/LOCAL_CHECKS.md:1` | — | GitHub Actions workflows in this repo are manual only (workflowdispatch). |
+| `localchecks--run-everything-the-remote-job-would-run` | section | — | Run everything the remote job would run | `docs/LOCAL_CHECKS.md:6` | — | ./scripts/check.sh |
+| `localchecks--tero-index` | section | — | Tero index | `docs/LOCAL_CHECKS.md:19` | — | python3 ../tero-mcp/scripts/generateliteindex.py --root "$(pwd)" |
+| `localchecks--from-a-checkout-that-can-see-the-generator-sibling-tero-mcp-recommended` | other | — | from a checkout that can see the generator (sibling tero-mcp recommended): | `docs/LOCAL_CHECKS.md:22` | — | python3 ../tero-mcp/scripts/generateliteindex.py --root "$(pwd)" |
+| `localchecks--or` | other | — | or: | `docs/LOCAL_CHECKS.md:24` | — | python3 scripts/generateteroindex.sh   # if present as a thin wrapper |
+| `localchecks--remote-optional` | section | — | Remote (optional) | `docs/LOCAL_CHECKS.md:30` | — | In GitHub: Actions → CI → Run workflow. |
 | `roadmap` | note | — | dev-mcp — Product Roadmap | `docs/ROADMAP.md:1` | Living (2026-07-08) | Status: Living (2026-07-08) |
 | `roadmap--waves` | section | — | Waves | `docs/ROADMAP.md:10` | — | — |
 | `roadmap--wave-a-truth-pass-now` | section | — | Wave A — Truth pass (now) | `docs/ROADMAP.md:12` | — | — |
@@ -49,7 +56,11 @@
 | `roadmap--name` | other | — | <name> | `docs/ROADMAP.md:52` | — | Status: ... |
 | `roadmap--pr-plan` | section | — | PR plan | `docs/ROADMAP.md:63` | — | 1. Assessment + roadmap (this) |
 | `roadmap--family-clone-layout-canonical` | section | — | Family clone layout (canonical) | `docs/ROADMAP.md:72` | — | $GITPARENT/ |
-| `readme-2` | other | — | Servers index | `servers/README.md:1` | — | One stub per server in the family — purpose, repo, install, and the .mcp.json snippet to |
+| `readme-2` | other | — | Tero index (Layer 1) | `docs/tero-index/README.md:1` | — | Machine + human citation index for this repository. |
+| `readme--regenerate` | section | — | Regenerate | `docs/tero-index/README.md:13` | — | python3 /path/to/tero-mcp/scripts/generateliteindex.py --root $(pwd) |
+| `readme--or-if-tero-mcp-is-a-sibling` | other | — | or if tero-mcp is a sibling: | `docs/tero-index/README.md:17` | — | python3 ../tero-mcp/scripts/generateliteindex.py --root $(pwd) |
+| `readme--serve-locally` | section | — | Serve locally | `docs/tero-index/README.md:21` | — | export TEROTOKENS=local-dev:refresh |
+| `readme-3` | other | — | Servers index | `servers/README.md:1` | — | One stub per server in the family — purpose, repo, install, and the .mcp.json snippet to |
 | `readme--submodules-vs.-links` | section | — | Submodules vs. links | `servers/README.md:14` | — | This directory links to each server's repo rather than checking it out as a git submodule. That |
 | `agent-mcp` | section | — | agent-mcp | `servers/agent-mcp.md:1` | — | Multi-LLM orchestration. |
 | `agent-mcp--status` | section | — | Status | `servers/agent-mcp.md:9` | — | Active development. |
