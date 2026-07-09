@@ -10,6 +10,7 @@ only; the actual server source lives in each linked repo.
 | [`context-mcp.md`](context-mcp.md) | [tzervas/context-mcp](https://github.com/tzervas/context-mcp) |
 | [`agent-mcp.md`](agent-mcp.md) | [tzervas/agent-mcp](https://github.com/tzervas/agent-mcp) |
 | [`security-mcp.md`](security-mcp.md) | [tzervas/security-mcp](https://github.com/tzervas/security-mcp) |
+| [`memory-gate-rs.md`](memory-gate-rs.md) | [tzervas/memory-gate-rs](https://github.com/tzervas/memory-gate-rs) |
 
 ## Submodules vs. links
 
