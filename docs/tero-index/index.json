@@ -1,5 +1,5 @@
 {
-  "generated": "Empirical/Declared — lite heading/line heuristic over markdown in dev-mcp via tero-mcp/scripts/generate_lite_index.py; source files are ground truth. Generated 2026-07-09.",
+  "generated": "Empirical/Declared — lite heading/line heuristic over markdown in dev-mcp via tero-mcp/scripts/generate_lite_index.py; source files are ground truth. Generated 2026-07-10.",
   "item_tag": "Empirical/Declared",
   "siblings": [],
   "items": [
@@ -244,6 +244,16 @@
       "summary": "Append for chore/w2-rollout-docs-wiring: W2 usage notes added to servers/.md (memory-gate-rs.md with cabal facade ex + cross-repo cabal+memory; context-mcp.md…"
     },
     {
+      "anchor": "readme--orch-wiring-inventory-truth-chore-orch-wiring-devmcp-appended",
+      "family": "doc",
+      "kind": "section",
+      "title": "Orch Wiring + Inventory Truth (chore/orch-wiring-devmcp appended)",
+      "file": "README.md",
+      "line": 68,
+      "tag": "Empirical/Declared",
+      "summary": "Per plan.md §3 (orch-wiring — pending): flesh dev-mcp for Wave A inventory truth + Wave B cabal consumption matrix. This advances orch in dev (dev-mcp/cabal)."
+    },
+    {
       "anchor": "assessment",
       "family": "doc",
       "kind": "note",
@@ -301,6 +311,16 @@
       "line": 46,
       "tag": "Empirical/Declared",
       "summary": "W2 usage + cabal facade example + cross-repo (cabal+memory) notes appended to servers/.md (esp. memory-gate-rs.md, context-mcp.md) + README + this + ROADMAP."
+    },
+    {
+      "anchor": "assessment--orch-wiring-inventory-truth-update-chore-orch-wiring-devmcp-2026-07-09",
+      "family": "doc",
+      "kind": "section",
+      "title": "Orch Wiring + Inventory Truth Update (chore/orch-wiring-devmcp, 2026-07-09)",
+      "file": "docs/ASSESSMENT.md",
+      "line": 58,
+      "tag": "Empirical/Declared",
+      "summary": "Advanced per plan.md §3 orch-wiring (parallel W2 tranche):"
     },
     {
       "anchor": "localchecks",
@@ -461,6 +481,16 @@
       "summary": "- Appended W2 usage notes (cabal facade ex, cross-repo cabal+memory) to servers/.md , README, ASSESSMENT, this ROADMAP."
     },
     {
+      "anchor": "roadmap--orch-wiring-inventory-truth-chore-orch-wiring-devmcp",
+      "family": "doc",
+      "kind": "section",
+      "title": "Orch Wiring Inventory Truth (chore/orch-wiring-devmcp)",
+      "file": "docs/ROADMAP.md",
+      "line": 97,
+      "tag": "Empirical/Declared",
+      "summary": "Appended to advance orch in dev per plan.md §3 (orch-wiring): cabal consumption matrix + inventory truth (W2 facade, memory-gate domains)."
+    },
+    {
       "anchor": "readme-2",
       "family": "doc",
       "kind": "other",
@@ -519,6 +549,16 @@
       "line": 15,
       "tag": "Empirical/Declared",
       "summary": "This directory links to each server's repo rather than checking it out as a git submodule. That"
+    },
+    {
+      "anchor": "readme--orch-inventory-truth-chore-orch-wiring-devmcp",
+      "family": "doc",
+      "kind": "section",
+      "title": "Orch Inventory Truth (chore/orch-wiring-devmcp)",
+      "file": "servers/README.md",
+      "line": 33,
+      "tag": "Empirical/Declared",
+      "summary": "cabal-devmelopner is the canonical consumer / leaf executor for dev-mcp tasks (see top-level README.md family clone layout: cabal-devmelopner/   # consumer)."
     },
     {
       "anchor": "agent-mcp",

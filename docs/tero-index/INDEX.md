@@ -1,15 +1,15 @@
 # dev-mcp — Tero Index (Layer 1)
 
-> **Honesty:** Empirical/Declared — lite heading/line heuristic over markdown in dev-mcp via tero-mcp/scripts/generate_lite_index.py; source files are ground truth. Generated 2026-07-09.
+> **Honesty:** Empirical/Declared — lite heading/line heuristic over markdown in dev-mcp via tero-mcp/scripts/generate_lite_index.py; source files are ground truth. Generated 2026-07-10.
 > Use this index to find where to Read, not as authoritative ground truth.
 
-- **Items:** 92
+- **Items:** 96
 - **Flagged:** 0
 - **item_tag:** `Empirical/Declared`
 - **Machine index:** [`index.json`](./index.json)
 - **Manifest:** [`MANIFEST.toml`](./MANIFEST.toml)
 
-## doc (92 entries)
+## doc (96 entries)
 
 | Anchor | Kind | Id | Title | File:Line | Status | Summary |
 |---|---|---|---|---|---|---|
@@ -37,12 +37,14 @@
 | `readme--license` | section | — | License | `README.md:49` | — | MIT — see [LICENSE](LICENSE). Matches the licensing of the sibling server repos. |
 | `readme--status-roadmap` | section | — | Status & roadmap | `README.md:53` | — | - [Assessment & gaps](docs/ASSESSMENT.md) |
 | `readme--w2-rollout-structuredresponse-commonmemoryadapter-agentdomain-mirrors` | section | — | W2 Rollout (StructuredResponse/CommonMemoryAdapter + AgentDomain mirrors) | `README.md:58` | — | Append for chore/w2-rollout-docs-wiring: W2 usage notes added to servers/.md (memory-gate-rs.md with cabal facade ex + cross-repo cabal+memory; context-mcp.md… |
+| `readme--orch-wiring-inventory-truth-chore-orch-wiring-devmcp-appended` | section | — | Orch Wiring + Inventory Truth (chore/orch-wiring-devmcp appended) | `README.md:68` | — | Per plan.md §3 (orch-wiring — pending): flesh dev-mcp for Wave A inventory truth + Wave B cabal consumption matrix. This advances orch in dev (dev-mcp/cabal). |
 | `assessment` | note | — | dev-mcp — Assessment & Gap Analysis | `docs/ASSESSMENT.md:1` | — | Date: 2026-07-08 |
 | `assessment--1.-what-it-is` | section | — | 1. What it is | `docs/ASSESSMENT.md:9` | — | Index + onboarding for: |
 | `assessment--2.-gaps` | section | — | 2. Gaps | `docs/ASSESSMENT.md:24` | — | — |
 | `assessment--3.-maturity-as-umbrella-3-5-after-refresh` | section | — | 3. Maturity as umbrella: **3 / 5** after refresh | `docs/ASSESSMENT.md:36` | — | Useful discovery; must track reality of leaf repos’ docs/ASSESSMENT.md + docs/ROADMAP.md. |
 | `assessment--tero-index` | section | — | Tero index | `docs/ASSESSMENT.md:42` | — | Layer-1 citation index: [docs/tero-index/](tero-index/) (index.json, INDEX.md, MANIFEST.toml). |
 | `assessment--w2-rollout-update-chore-w2-rollout-docs-wiring-2026-07-09` | section | — | W2 Rollout Update (chore/w2-rollout-docs-wiring, 2026-07-09) | `docs/ASSESSMENT.md:46` | — | W2 usage + cabal facade example + cross-repo (cabal+memory) notes appended to servers/.md (esp. memory-gate-rs.md, context-mcp.md) + README + this + ROADMAP. |
+| `assessment--orch-wiring-inventory-truth-update-chore-orch-wiring-devmcp-2026-07-09` | section | — | Orch Wiring + Inventory Truth Update (chore/orch-wiring-devmcp, 2026-07-09) | `docs/ASSESSMENT.md:58` | — | Advanced per plan.md §3 orch-wiring (parallel W2 tranche): |
 | `localchecks` | section | — | Local checks (CI parity) | `docs/LOCAL_CHECKS.md:1` | — | GitHub Actions workflows in this repo are manual only (workflowdispatch). |
 | `localchecks--run-everything-the-remote-job-would-run` | section | — | Run everything the remote job would run | `docs/LOCAL_CHECKS.md:6` | — | ./scripts/check.sh |
 | `localchecks--tero-index` | section | — | Tero index | `docs/LOCAL_CHECKS.md:19` | — | python3 ../tero-mcp/scripts/generateliteindex.py --root "$(pwd)" |
@@ -59,12 +61,14 @@
 | `roadmap--pr-plan` | section | — | PR plan | `docs/ROADMAP.md:63` | — | 1. Assessment + roadmap (this) |
 | `roadmap--family-clone-layout-canonical` | section | — | Family clone layout (canonical) | `docs/ROADMAP.md:72` | — | $GITPARENT/ |
 | `roadmap--w2-rollout-docs-wiring-chore-w2-rollout-docs-wiring` | section | — | W2 Rollout Docs Wiring (chore/w2-rollout-docs-wiring) | `docs/ROADMAP.md:87` | — | - Appended W2 usage notes (cabal facade ex, cross-repo cabal+memory) to servers/.md , README, ASSESSMENT, this ROADMAP. |
+| `roadmap--orch-wiring-inventory-truth-chore-orch-wiring-devmcp` | section | — | Orch Wiring Inventory Truth (chore/orch-wiring-devmcp) | `docs/ROADMAP.md:97` | — | Appended to advance orch in dev per plan.md §3 (orch-wiring): cabal consumption matrix + inventory truth (W2 facade, memory-gate domains). |
 | `readme-2` | other | — | Tero index (Layer 1) | `docs/tero-index/README.md:1` | — | Machine + human citation index for this repository. |
 | `readme--regenerate` | section | — | Regenerate | `docs/tero-index/README.md:13` | — | python3 /path/to/tero-mcp/scripts/generateliteindex.py --root $(pwd) |
 | `readme--or-if-tero-mcp-is-a-sibling` | other | — | or if tero-mcp is a sibling: | `docs/tero-index/README.md:17` | — | python3 ../tero-mcp/scripts/generateliteindex.py --root $(pwd) |
 | `readme--serve-locally` | section | — | Serve locally | `docs/tero-index/README.md:21` | — | export TEROTOKENS=local-dev:refresh |
 | `readme-3` | other | — | Servers index | `servers/README.md:1` | — | One stub per server in the family — purpose, repo, install, and the .mcp.json snippet to |
 | `readme--submodules-vs.-links` | section | — | Submodules vs. links | `servers/README.md:15` | — | This directory links to each server's repo rather than checking it out as a git submodule. That |
+| `readme--orch-inventory-truth-chore-orch-wiring-devmcp` | section | — | Orch Inventory Truth (chore/orch-wiring-devmcp) | `servers/README.md:33` | — | cabal-devmelopner is the canonical consumer / leaf executor for dev-mcp tasks (see top-level README.md family clone layout: cabal-devmelopner/   # consumer). |
 | `agent-mcp` | section | — | agent-mcp | `servers/agent-mcp.md:1` | — | Multi-LLM orchestration. |
 | `agent-mcp--status` | section | — | Status | `servers/agent-mcp.md:9` | — | Active development. |
 | `agent-mcp--repo` | section | — | Repo | `servers/agent-mcp.md:13` | — | <https://github.com/tzervas/agent-mcp> |

@@ -93,4 +93,20 @@ $GIT_PARENT/
 - Follow-on: tero update per leaf; hygiene; land --no-ff to dev then main; propagate; verify tero "W2|facade|Structured|CommonMemory".
 
 See plan.md:44, dev-docs/waves/wsfull-*.md .
+
+## Orch Wiring Inventory Truth (chore/orch-wiring-devmcp)
+
+Appended to advance orch in dev per plan.md §3 (orch-wiring): cabal consumption matrix + inventory truth (W2 facade, memory-gate domains).
+
+- D-A1/D-A2 progress: server inventory table (README) + servers/README.md now links leaf ROADMAP.md (e.g. memory-gate-rs, cabal as consumer) + ASSESSMENT cross-refs; added orch matrix.
+- D-B2: cabal-devmelopner consumption matrix realized in servers/README.md#orch-inventory-truth (cabal as primary leaf for dev-mcp tasks; W2 facade matrix rows for consumers + domains).
+- memory-gate domains (M1): listed + referenced (TERO primary for tero L1 in cabal facade; CONTEXT etc).
+- Doctor notes: sketched (per-server --help + future doctor-all.sh); links in servers/README.
+- Cabal as consumer: explicit (family clone + matrix); cabal uses dev-mcp for onboarding, registers servers, consumes as leaf executor (tools + W2 orch).
+- Tero cites (pre-edit): dev-mcp text_search "orch inventory w2 cabal" (hits: memory-gate-rs--w2-mirror-to-cabal-tero, readme--server-inventory, roadmap--w2..., assessment--w2..., agent-mcp--w2-usage-notes); global workspacecabalteroreadiness--leaf-orch-review-tranche-wsfull + plan.md §3.
+- Cross: cabal AGENTS (appends on dev-mcp orch use), docs/ROADMAP (as leaf).
+
+Next (Wave B/C): doctor script, CI link check, consumption badges. Land --no-ff dev/main + propagate + verify tero hits. See ASSESSMENT update, servers/README for matrix.
+
+Refs: plan.md:60 (dev-mcp critical paths), wsfull-wave-2026-07-09-compact.md, WORKSPACE_CABAL_TERO_READINESS.md. Append-only.
 ```
