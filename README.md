@@ -81,3 +81,8 @@ Doctor: run per-server binary --help or grok mcp doctor <server>. See AGENTS.md 
 Follow-on: land --no-ff, propagate (dev<-chore, main<-dev --no-ff, dev<-main), update-tero, verify tero "orch|dev-mcp|cabal|w2|facade". Cites: plan.md:60-80, dev-mcp ROADMAP Wave A/B, wsfull compact.
 
 All append-only per dev-workflow.
+## Semver + Releases (2026-07-10 appended)
+
+Baseline v0.1.0 for this dev support/toolchain component (extracted from mycelium; agnostic dev tooling).
+
+See AGENTS.md##Semver.

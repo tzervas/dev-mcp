@@ -110,3 +110,12 @@ Next (Wave B/C): doctor script, CI link check, consumption badges. Land --no-ff 
 
 Refs: plan.md:60 (dev-mcp critical paths), wsfull-wave-2026-07-09-compact.md, WORKSPACE_CABAL_TERO_READINESS.md. Append-only.
 ```
+## Semver baseline (appended 2026-07-10)
+
+Per plan + user: start with toolchain + dev support semver + releases.
+
+- dev-mcp baseline v0.1.0.
+- See AGENTS.md for details, cites, local GHCR preference (podman, no Actions).
+- Extracted dev tooling from mycelium.
+
+Cites: plan.md, tero (dev support mentions).

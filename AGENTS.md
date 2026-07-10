@@ -88,3 +88,17 @@ of its own.
   `servers/`, prefer the server's own repo as ground truth and send a small PR here to reconcile.
 - `tero-mcp` is listed as **New** because the repo doesn't exist yet — don't invent build
   instructions for it beyond the placeholder in `servers/tero-mcp.md`.
+## Semver + Releases (2026-07-10 appended)
+
+Semver baseline established for dev support/toolchain (per plan.md, user directive: start with toolchain first + dev support stuff).
+
+- This project: dev-mcp (hub for dev tooling, MCP servers, skills, kickoffs).
+- Extracted from mycelium into standalone component repo: language/project agnostic dev support tooling.
+- Baseline: v0.1.0 (no prior tags/manifest version; previously unestablished).
+- Process: hygiene (check.sh), local builds only, GPG tag intent, gh release, push to tzervas remote.
+- Local podman GHCR for dist images when Dockerfile present (avoids Actions credits).
+- No mods to isolated mycelium (read-only pull for info only; copy/extract only).
+
+Cites: plan.md (semver writ large, local GHCR), tero searches (dev support/toolchain), workspace-private analyses, extraction clarification.
+
+Followed: tero-first, branch-guard (chore/semver-baseline-v0.1.0), append-only, dev-workflow.
