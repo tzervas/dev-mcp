@@ -54,3 +54,20 @@ W2 usage + cabal facade example + cross-repo (cabal+memory) notes appended to se
 - Tero cites: plan.md:44, wsfull-wave-2026-07-09-compact.md:30 (W2 schemas/facade start), dev-docs/schemas/.
 
 All append-only; hygiene, update-tero, branch chore/w2-rollout-docs-wiring. Land/propagate to dev/main. Verify tero hits post.
+
+## Orch Wiring + Inventory Truth Update (chore/orch-wiring-devmcp, 2026-07-09)
+
+Advanced per plan.md §3 orch-wiring (parallel W2 tranche):
+
+- Enhanced servers/README.md with orch inventory truth: cabal-devmelopner as consumer/leaf for dev-mcp tasks; explicit W2 facade matrix (6 consumers, domain scopes from memory-gate M1); doctor notes + links to leaf ROADMAP.md / ASSESSMENT.md (addresses D-A2, D-B2).
+- Top README + this + ROADMAP appended with orch section + consumption matrix refs + tero cites.
+- Inventory truth: cabal listed as # consumer; uses family (agent-mcp for orch, tero-mcp L1, memory-gate domains, context session) via W2 CommonMemoryAdapter (StructuredResponse always + citations/orchestration).
+- Memory-gate domains: TERO/CONTEXT/MEMORY_GATE/LANG_*/WORKSPACE etc (prefix FromStr); mirrored in cabal; domain as key for facade-scoped orch.
+- Links: added to servers/README (e.g. cabal-devmelopner AGENTS/ROADMAP); cross to plan.md §3, wsfull compact, dev-docs schemas.
+- Doctor: notes fit in servers/README (grok mcp doctor + per-server --help; future scripts/doctor-all per ROADMAP).
+
+Tero-first (MCP + /root/git/scripts/tero.sh dev-mcp): text_search "orch|inventory|w2|cabal consumption" + cite/explain pre-edits (hits on inventory, w2-mirror-to-cabal, leaf-orch-review, server-inventory anchors). Post will re-verify.
+
+Cites: workspacecabalteroreadiness--w2-structured-schemas-orch-started-2026-07-08, dev-mcp readme--w2-rollout..., roadmap--w2..., plan.md orch section, cabal AGENTS (subagents tero).
+
+All append-only, hygiene (check.sh), update-tero, branch-guard followed. Land --no-ff + propagate; verify tero "orch|dev-mcp|cabal|facade|inventory". Maturity bump candidate post.

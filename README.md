@@ -64,3 +64,20 @@ Cabal facade example (mirrors memory-gate M1): see servers/memory-gate-rs.md and
 Refs (tero-cited): plan.md §2 (w2-rollout — in_progress), wsfull-wave-2026-07-09-compact.md §W2, dev-docs/schemas/W2-STRUCTURED-SCHEMAS.md + *.example.
 
 Hygiene + tero update + land --no-ff dev/main + propagate per task. All append-only.
+
+## Orch Wiring + Inventory Truth (chore/orch-wiring-devmcp appended)
+
+Per plan.md §3 (orch-wiring — pending): flesh dev-mcp for Wave A inventory truth + Wave B cabal consumption matrix. This advances orch in dev (dev-mcp/cabal).
+
+- cabal as leaf/consumer: family layout marks `cabal-devmelopner/   # consumer`; used for dev-mcp tasks (inventory discovery, W2 facade orch memory, server registration via servers/ snippets). Cabal exercises tero + memory-gate + context in W2 paths.
+- Enhanced servers/README.md with full W2 facade matrix + memory-gate domains + links to leaf ROADMAPs (D-A2) + doctor notes (D-A4 sketch).
+- See servers/README.md#orch-inventory-truth for matrix (cabal primary, agent-mcp future orch, context session, memory-gate provider, tero L1, security screen).
+- Cross consumption: cabal facade (schemas.py CommonMemoryAdapter.query(domain) -> always StructuredResponse) feeds orch hints; mirrors memory-gate M1 domains.
+- Tero-first verified: text_search "orch|inventory|w2|cabal consumption" (dev-mcp index + global) + cite/explain; hits include readme--server-inventory, workspacecabalteroreadiness--w2-structured-schemas-orch-started..., plan sections.
+- Links: ASSESSMENT/ROADMAP here; per-server to https://.../docs/ROADMAP.md + ASSESSMENT.md; cabal-devmelopner AGENTS.md, docs/ROADMAP.md.
+
+Doctor: run per-server binary --help or grok mcp doctor <server>. See AGENTS.md for family cold-start.
+
+Follow-on: land --no-ff, propagate (dev<-chore, main<-dev --no-ff, dev<-main), update-tero, verify tero "orch|dev-mcp|cabal|w2|facade". Cites: plan.md:60-80, dev-mcp ROADMAP Wave A/B, wsfull compact.
+
+All append-only per dev-workflow.
