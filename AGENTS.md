@@ -8,7 +8,7 @@ about the servers it indexes.
 
 - `git`
 - `cargo` / Rust toolchain (agent-mcp, context-mcp, security-mcp are Rust crates)
-- `uv` (if/when a Python-based server joins the family — none currently is)
+- `uv` (for **tero-mcp** / `tero-mcp-lite`; Python ≥3.11)
 - An MCP client to register the servers with: Claude Desktop, VS Code + GitHub Copilot, or any
   other MCP-compatible client
 
@@ -21,10 +21,11 @@ does.
 ```bash
 mkdir -p ~/dev/mcp && cd ~/dev/mcp
 
+git clone https://github.com/tzervas/tero-mcp
 git clone https://github.com/tzervas/context-mcp
 git clone https://github.com/tzervas/agent-mcp
 git clone https://github.com/tzervas/security-mcp
-# tero-mcp: not yet published — clone once it exists (see servers/tero-mcp.md)
+git clone https://github.com/tzervas/webpuppet-rs-mcp
 ```
 
 ## 3. Build each server
@@ -32,17 +33,18 @@ git clone https://github.com/tzervas/security-mcp
 All current family members are Rust crates; build each with `cargo`:
 
 ```bash
-cd ~/dev/mcp/context-mcp  && cargo build --release
-cd ~/dev/mcp/agent-mcp    && cargo build -p embeddenator-agent-mcp --release
-cd ~/dev/mcp/security-mcp && cargo build --release
+cd ~/dev/mcp/tero-mcp           && uv sync
+cd ~/dev/mcp/context-mcp        && cargo build --release
+cd ~/dev/mcp/agent-mcp          && cargo build -p embeddenator-agent-mcp --release
+cd ~/dev/mcp/security-mcp       && cargo build --release
+cd ~/dev/mcp/webpuppet-rs-mcp   && cargo build --release
 ```
 
 Some servers also publish to crates.io — `cargo install <name>` is often faster than a from-source
 build if you don't need a specific branch. Check each server's own README/INSTALL docs; details
 can drift, and that repo is the source of truth for its own build.
 
-If/when a Python-based server joins the family, its bring-up step is `uv sync` per this repo's
-sibling `mycelium` conventions (`uv sync --group <group>`) rather than `cargo build`.
+**tero-mcp** is Python-first (`uv sync` in that repo); optional Rust build lives under `tero-mcp/rust/`.
 
 ## 4. Register with your MCP client
 
@@ -65,6 +67,18 @@ built family:
       "type": "stdio",
       "command": "/path/to/security-mcp/target/release/security-mcp",
       "args": ["--stdio"]
+    },
+    "tero": {
+      "command": "uv",
+      "args": [
+        "run", "--project", "/path/to/tero-mcp",
+        "tero-mcp-lite", "--index", "/path/to/index.json"
+      ],
+      "env": { "TERO_TOKENS": "local-dev:read" }
+    },
+    "webpuppet": {
+      "command": "/path/to/webpuppet-rs-mcp/target/release/webpuppet-mcp",
+      "args": ["--stdio"]
     }
   }
 }
@@ -86,8 +100,8 @@ of its own.
   for the submodule-vs-link tradeoff).
 - If a server's actual install/registration steps have drifted from what's documented under
   `servers/`, prefer the server's own repo as ground truth and send a small PR here to reconcile.
-- `tero-mcp` is listed as **New** because the repo doesn't exist yet — don't invent build
-  instructions for it beyond the placeholder in `servers/tero-mcp.md`.
+- **tero-mcp** and **webpuppet-rs-mcp** install steps can drift — prefer each leaf repo README and
+  reconcile stubs here when they do.
 
 ## Secrets, .env and git-secrets protection (TLC 2026-07-16)
 

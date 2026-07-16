@@ -13,7 +13,7 @@ Companion: [ASSESSMENT.md](ASSESSMENT.md).
 
 | ID | Work |
 |----|------|
-| D-A1 | Rewrite server inventory table (tero live; context ≠ RAG; add webpuppet-rs-mcp, search-box) |
+| D-A1 | Rewrite server inventory table (tero live; context ≠ RAG; add webpuppet-rs-mcp) — **done 2026-07-16**; search-box row still optional |
 | D-A2 | Link each `servers/*.md` to leaf `docs/ROADMAP.md` |
 | D-A3 | AGENTS.md: cold-start tero + family clone list |
 | D-A4 | `scripts/doctor-all.sh` sketch (optional): run `grok mcp doctor` / binary `--help` |

@@ -16,7 +16,7 @@ Index + onboarding for:
 | context-mcp | tzervas/context-mcp | Session memory OK; **not** legitimate RAG yet |
 | agent-mcp | tzervas/agent-mcp | Alpha orchestration |
 | security-mcp | tzervas/security-mcp | Alpha screener |
-| webpuppet-rs-mcp | tzervas/webpuppet-rs-mcp | **Missing from inventory** — should add |
+| webpuppet-rs-mcp | tzervas/webpuppet-rs-mcp | In inventory (stub + README row) |
 | search-box | tzervas/search-box | Real code on develop/dev; main was scaffold |
 
 ---
@@ -25,11 +25,9 @@ Index + onboarding for:
 
 | Gap | Sev |
 |-----|-----|
-| Stale status table (tero unpublished) | High |
-| Missing webpuppet / search-box rows | Med |
-| AGENTS.md may omit Python tero bring-up | Med |
+| search-box not in umbrella inventory | Med |
 | No single “clone all + doctor” script accuracy | Med |
-| context-mcp RAG overclaim echoed | High |
+| tero-index / INDEX.md still reflects pre-truth-pass wording until regenerated | Low |
 
 ---
 

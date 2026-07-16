@@ -12,10 +12,11 @@ code.
 
 | Server | Purpose | Repo | Status |
 |---|---|---|---|
-| **tero-mcp** | Transparent, cited-memory MCP server — provenance-carrying answers over a project's decisions/docs/issues, never a silent empty answer | [tzervas/tero-mcp](https://github.com/tzervas/tero-mcp) | **New** — planned; repo not yet published |
-| **context-mcp** | RAG context store — multi-tier (in-memory + optional disk) context/memory service for agents, with temporal metadata and text-based retrieval | [tzervas/context-mcp](https://github.com/tzervas/context-mcp) | Production-ready for context storage / lightweight RAG; APIs stable |
+| **tero-mcp** | Transparent, cited-memory MCP server — provenance-carrying answers over a project's decisions/docs/issues, never a silent empty answer | [tzervas/tero-mcp](https://github.com/tzervas/tero-mcp) | **Published & usable** — `tero-mcp-lite` (Python/uv) + optional Rust `tero-rs` binary; Layer-1 index query |
+| **context-mcp** | Session context store — multi-tier (in-memory + optional disk) context/memory for agents, temporal metadata, literal text match/filter (no embeddings yet) | [tzervas/context-mcp](https://github.com/tzervas/context-mcp) | Production-ready for **session context storage**; not semantic/RAG retrieval yet |
 | **agent-mcp** | Multi-LLM orchestration — routes/parallelizes/consensus-builds prompts across multiple AI providers (Claude, ChatGPT, Gemini, Grok, …), with workflow support | [tzervas/agent-mcp](https://github.com/tzervas/agent-mcp) | Active development |
 | **security-mcp** | Content screening — prompt-injection defense, PII/secrets detection, screens input/output text for other servers | [tzervas/security-mcp](https://github.com/tzervas/security-mcp) | Alpha / active development |
+| **webpuppet-rs-mcp** | Browser automation MCP — webpuppet tools (prompt, screenshot, navigate, permissions, human-in-the-loop) over stdio JSON-RPC | [tzervas/webpuppet-rs-mcp](https://github.com/tzervas/webpuppet-rs-mcp) | Published; pairs with [webpuppet-rs](https://github.com/tzervas/webpuppet-rs) |
 | **memory-gate-rs** | Dynamic memory learning layer — persistent knowledge accumulation, vector retrieval, consolidation; M1 domains/facade (Tero/Context/MemoryGate/Lang* scoping), W2 cabal mirror | [tzervas/memory-gate-rs](https://github.com/tzervas/memory-gate-rs) | M1 complete (PR #26); v1.0.0; active |
 
 Per-server details (purpose, install, `.mcp.json` registration snippet) live under

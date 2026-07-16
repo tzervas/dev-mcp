@@ -1,16 +1,17 @@
 # context-mcp
 
-**RAG context store.**
+**Session context store.**
 
 MCP server for context management: store/retrieve context items with temporal metadata (creation
 time, age, expiration) and text-based query/filtering. Multi-tier storage (in-memory LRU always;
-optional sled-based disk persistence). Note: embeddings/semantic search are not yet implemented —
-retrieval today is literal text matching (see the server's own README for the current "what it
-does / does not do yet" split).
+optional sled-based disk persistence). **Not RAG:** embeddings and semantic search are not
+implemented — retrieval is literal text matching only (see the server's own README for the current
+"what it does / does not do yet" split).
 
 ## Status
 
-Production-ready for context storage and lightweight RAG; APIs stable.
+Production-ready for **session context storage**; APIs stable. Do not describe this server as
+semantic retrieval or RAG until the leaf repo documents that capability.
 
 ## Repo
 

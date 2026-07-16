@@ -6,10 +6,11 @@ only; the actual server source lives in each linked repo.
 
 | Stub | Server repo |
 |---|---|
-| [`tero-mcp.md`](tero-mcp.md) | [tzervas/tero-mcp](https://github.com/tzervas/tero-mcp) (new) |
+| [`tero-mcp.md`](tero-mcp.md) | [tzervas/tero-mcp](https://github.com/tzervas/tero-mcp) |
 | [`context-mcp.md`](context-mcp.md) | [tzervas/context-mcp](https://github.com/tzervas/context-mcp) |
 | [`agent-mcp.md`](agent-mcp.md) | [tzervas/agent-mcp](https://github.com/tzervas/agent-mcp) |
 | [`security-mcp.md`](security-mcp.md) | [tzervas/security-mcp](https://github.com/tzervas/security-mcp) |
+| [`webpuppet-rs-mcp.md`](webpuppet-rs-mcp.md) | [tzervas/webpuppet-rs-mcp](https://github.com/tzervas/webpuppet-rs-mcp) |
 | [`memory-gate-rs.md`](memory-gate-rs.md) | [tzervas/memory-gate-rs](https://github.com/tzervas/memory-gate-rs) |
 
 ## Submodules vs. links
@@ -17,7 +18,7 @@ only; the actual server source lives in each linked repo.
 This directory links to each server's repo rather than checking it out as a git submodule. That
 keeps `dev-mcp` a lightweight index: no pinned SHAs to bump, no `--recurse-submodules` clone
 friction, and no coupling between this repo's visibility (about to flip public) and a server repo
-that may still be private or mid-rename (`tero-mcp` doesn't exist yet).
+that may still be private or on independent release cadences.
 
 If the family stabilizes and you want reproducible multi-server checkouts from one `git clone`,
 submodules are a reasonable upgrade — e.g.:
