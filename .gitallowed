@@ -1,0 +1,5 @@
+# git-secrets allowed (false positive exceptions)
+# Variable *names* and example placeholders are OK; real values must never match prohibited patterns.
+XAI_API_KEY
+ANTHROPIC_API_KEY
+OPENAI_API_KEY
