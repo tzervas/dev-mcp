@@ -88,3 +88,19 @@ of its own.
   `servers/`, prefer the server's own repo as ground truth and send a small PR here to reconcile.
 - `tero-mcp` is listed as **New** because the repo doesn't exist yet — don't invent build
   instructions for it beyond the placeholder in `servers/tero-mcp.md`.
+
+## Secrets, .env and git-secrets protection (TLC 2026-07-16)
+
+**WHAT**: Keep secrets out of this docs umbrella.
+- `.gitignore` already ignores `.env`, `.env.*`, `*.key`, `*.pem`.
+- Optional: install `git-secrets` locally and run `git secrets --scan` (wired into `scripts/check.sh` when available).
+- `.gitallowed` may list false-positive *names* (never values).
+
+**WHY**: Agents/tools nearby may handle `XAI_API_KEY` / provider keys; docs repos still need hygiene.
+
+**Verify**:
+```bash
+./scripts/check.sh
+command -v git-secrets >/dev/null && git secrets --scan
+```
+
