@@ -1,0 +1,138 @@
+# Machine-readable catalog of the tzervas MCP server family.
+# Source of truth for compose (scripts/compose-mcp-json.py) and docs tables.
+# Human stubs: servers/*.md  |  Umbrella README: ../README.md
+#
+# schema_version: bump when field meanings change incompatibly.
+schema_version: 1
+family: tzervas-mcp
+umbrella:
+  repo: https://github.com/tzervas/dev-mcp
+  role: index-only  # no server implementations live here
+
+# Default base path placeholders used in install_hints / mcp command paths.
+# Override when composing: scripts/compose-mcp-json.py --base-dir ~/dev/mcp
+defaults:
+  base_dir: "${MCP_BASE_DIR:-$HOME/dev/mcp}"
+
+servers:
+  - id: tero-mcp
+    name: tero
+    purpose: >
+      Transparent, cited-memory MCP server — provenance-carrying answers over a
+      project's decisions/docs/issues; never a silent empty answer.
+    repo: https://github.com/tzervas/tero-mcp
+    language: python  # tero-mcp-lite; optional rust/ for tero-rs
+    status: published
+    status_note: "tero-mcp-lite (Python/uv) + optional Rust tero-rs; Layer-1 index query"
+    doc: servers/tero-mcp.md
+    install_hints:
+      - "git clone https://github.com/tzervas/tero-mcp && cd tero-mcp && uv sync"
+      - "Generate index: scripts/generate_lite_index.py (see GENERATING-AN-INDEX.md)"
+    mcp:
+      # key under mcpServers
+      key: tero
+      command: uv
+      args:
+        - run
+        - --project
+        - "{base_dir}/tero-mcp"
+        - tero-mcp-lite
+        - --index
+        - "{base_dir}/tero-mcp/index.json"
+      env:
+        TERO_TOKENS: "local-dev:read"
+    tags: [memory, citations, layer-1]
+
+  - id: context-mcp
+    name: context-mcp
+    purpose: >
+      Session context store — multi-tier (in-memory + optional disk) context for
+      agents with temporal metadata; literal text match/filter (not RAG).
+    repo: https://github.com/tzervas/context-mcp
+    language: rust
+    status: production-session-store
+    status_note: "Production-ready for session context storage; not semantic/RAG"
+    doc: servers/context-mcp.md
+    install_hints:
+      - "cargo install context-mcp"
+      - "or: git clone … && cargo build --release"
+    mcp:
+      key: context-mcp
+      command: "{base_dir}/context-mcp/target/release/context-mcp"
+      args: ["--stdio"]
+    tags: [context, session]
+
+  - id: agent-mcp
+    name: agent-mcp
+    purpose: >
+      Multi-LLM orchestration — route/parallelize/consensus prompts across
+      Claude, ChatGPT, Gemini, Grok, … with workflow support.
+    repo: https://github.com/tzervas/agent-mcp
+    language: rust
+    status: active-development
+    status_note: "Active development"
+    doc: servers/agent-mcp.md
+    install_hints:
+      - "git clone https://github.com/tzervas/agent-mcp"
+      - "cargo build -p embeddenator-agent-mcp --release"
+    mcp:
+      key: agent-mcp
+      command: "{base_dir}/agent-mcp/target/release/agent-mcp"
+      args: ["--visible"]
+    tags: [orchestration, multi-llm]
+
+  - id: security-mcp
+    name: security-mcp
+    purpose: >
+      Content screening — prompt-injection defense, PII/secrets detection;
+      screens input/output text for other servers (heuristic, not full DLP).
+    repo: https://github.com/tzervas/security-mcp
+    language: rust
+    status: alpha
+    status_note: "Alpha / active development — rules and thresholds will evolve"
+    doc: servers/security-mcp.md
+    install_hints:
+      - "cargo install security-mcp"
+      - "or: git clone … && cargo build --release"
+    mcp:
+      key: security-mcp
+      type: stdio
+      command: "{base_dir}/security-mcp/target/release/security-mcp"
+      args: ["--stdio"]
+    tags: [security, screening]
+
+  - id: webpuppet-rs-mcp
+    name: webpuppet
+    purpose: >
+      Browser automation MCP — prompt, screenshot, navigate, permissions,
+      human-in-the-loop over stdio JSON-RPC (pairs with webpuppet-rs).
+    repo: https://github.com/tzervas/webpuppet-rs-mcp
+    language: rust
+    status: published
+    status_note: "Published; pairs with webpuppet-rs"
+    doc: servers/webpuppet-rs-mcp.md
+    install_hints:
+      - "git clone https://github.com/tzervas/webpuppet-rs-mcp"
+      - "cargo build --release  # or cargo install --path ."
+      - "Requires Brave/Chrome/Chromium on host"
+    mcp:
+      key: webpuppet
+      command: "{base_dir}/webpuppet-rs-mcp/target/release/webpuppet-mcp"
+      args: ["--stdio"]
+    tags: [browser, automation]
+
+  - id: memory-gate-rs
+    name: memory-gate-rs
+    purpose: >
+      Dynamic memory learning layer — persistent knowledge accumulation, vector
+      retrieval, consolidation; M1 domains/facade (Tero/Context/MemoryGate/Lang*).
+    repo: https://github.com/tzervas/memory-gate-rs
+    language: rust
+    status: library
+    status_note: "M1 complete; v1.0.0 crates.io; core library (no standalone MCP binary today)"
+    doc: servers/memory-gate-rs.md
+    install_hints:
+      - "cargo install memory-gate-rs  # or depend via Cargo.toml memory-gate-rs = \"1.0\""
+      - "Surface memory via tero-mcp / context-mcp / cabal W2 facade rather than a dedicated MCP binary"
+    mcp: null  # not a standalone MCP process yet
+    tags: [memory, library, domains]
