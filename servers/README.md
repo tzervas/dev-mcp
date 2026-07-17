@@ -4,6 +4,13 @@ One stub per server in the family — purpose, repo, install, and the `.mcp.json
 register it with an MCP client (Claude Desktop, VS Code, etc.). These stubs are documentation
 only; the actual server source lives in each linked repo.
 
+**Machine-readable twin:** [`catalog.yaml`](catalog.yaml) (ids, status, install hints, mcp
+command blocks). Compose a client config with:
+
+```bash
+python3 scripts/compose-mcp-json.py --base-dir ~/dev/mcp --out .mcp.json
+```
+
 | Stub | Server repo |
 |---|---|
 | [`tero-mcp.md`](tero-mcp.md) | [tzervas/tero-mcp](https://github.com/tzervas/tero-mcp) |

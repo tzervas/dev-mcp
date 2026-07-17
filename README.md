@@ -13,6 +13,43 @@ gives you the shortest path to standing the whole family up locally. Each server
 released in its **own repository** — dev-mcp aggregates/indexes them, it does not vendor their
 code.
 
+| Artifact | Role |
+|----------|------|
+| [`servers/catalog.yaml`](servers/catalog.yaml) | **Machine-readable** family catalog (purpose, install, mcp blocks) |
+| [`servers/*.md`](servers/) | Human stubs (purpose, install, `.mcp.json` snippets) |
+| [`scripts/compose-mcp-json.py`](scripts/compose-mcp-json.py) | Compose a client `.mcp.json` from the catalog |
+| [`AGENTS.md`](AGENTS.md) | Full local bring-up for agents/humans |
+
+## 5-minute path (index only)
+
+This repo is an **index** — no server binaries are built here. In five minutes you can discover
+the family, list the catalog, and emit a starter `.mcp.json` (paths assume clones under
+`~/dev/mcp`).
+
+```bash
+git clone https://github.com/tzervas/dev-mcp.git
+cd dev-mcp
+
+# structural smoke
+bash scripts/check.sh
+
+# list servers (needs PyYAML: pip install pyyaml)
+python3 scripts/compose-mcp-json.py --list
+
+# emit a client config (edit paths / tokens before use)
+python3 scripts/compose-mcp-json.py --base-dir ~/dev/mcp --out .mcp.json
+```
+
+Expected: `check.sh` prints `OK: dev-mcp structural checks passed`; `--list` prints one line per
+family server; `.mcp.json` contains an `mcpServers` object. **Building** individual servers is a
+separate step — clone/build per row in the inventory (or follow [`AGENTS.md`](AGENTS.md)).
+
+### Compose notes
+
+- `--only tero-mcp,context-mcp` limits which servers are included.
+- Library-only entries (e.g. `memory-gate-rs` with `mcp: null`) are skipped in the JSON output.
+- Replace placeholder paths and rotate secrets (`TERO_TOKENS`, etc.) before pointing a real client at the file.
+
 ## Server inventory
 
 | Server | Purpose | Repo | Status |
