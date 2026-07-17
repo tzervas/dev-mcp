@@ -6,7 +6,7 @@ test -f README.md
 test -d servers
 test -f servers/README.md || test -n "$(ls servers/*.md 2>/dev/null | head -1)"
 # required server stubs mentioned in README
-for s in tero-mcp context-mcp agent-mcp security-mcp memory-gate-rs; do
+for s in tero-mcp context-mcp agent-mcp security-mcp webpuppet-rs-mcp memory-gate-rs; do
   if ! ls servers/*"$s"* >/dev/null 2>&1 && ! grep -qi "$s" README.md; then
     echo "WARN: $s not referenced"
   fi
