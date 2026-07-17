@@ -1,5 +1,10 @@
 # dev-mcp
 
+<!-- FLEET-BADGES:BEGIN -->
+[![CI](https://github.com/tzervas/dev-mcp/actions/workflows/fleet-ci.yml/badge.svg?branch=main)](https://github.com/tzervas/dev-mcp/actions/workflows/fleet-ci.yml?query=branch%3Amain)
+[![Security](https://github.com/tzervas/dev-mcp/actions/workflows/fleet-security.yml/badge.svg?branch=main)](https://github.com/tzervas/dev-mcp/actions/workflows/fleet-security.yml?query=branch%3Amain)
+<!-- FLEET-BADGES:END -->
+
 **The umbrella index for the `tzervas` MCP (Model Context Protocol) server family.**
 
 This repo does **not** contain server implementations. It is documentation-first: it names the
